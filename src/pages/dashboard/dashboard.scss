@@ -1,0 +1,151 @@
+.content-wrapper {
+  margin-top: 70px;
+  margin-left: 250px;
+}
+
+.content-wrapper2 {
+  margin-left: 0px;
+  margin-top: 70px;
+}
+
+.nav-header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  .right-nav-section {
+    display: flex;
+    gap: 20px;
+    justify-self: end;
+    align-items: center;
+
+    #basic-button {
+      border-radius: 50%;
+    }
+
+    .sm-avatar {
+      display: none;
+    }
+
+    .docs-text {
+      font-size: 16px;
+      color: #213f7d;
+      text-decoration: underline;
+    }
+
+    .username-text {
+      color: #213f7d;
+      font-size: 14px;
+    }
+  }
+
+  .search-wrapper {
+    display: flex;
+    button {
+      border: 0px;
+      border-top-right-radius: 8px;
+      border-bottom-right-radius: 8px;
+      padding: 10px 25px;
+      color: #ffffff;
+
+      background-color: #39cdcc;
+    }
+    input {
+      padding: 8px 20px;
+      font-size: 14px;
+      color: rgba(84, 95, 125, 0.7);
+      border: 1px solid rgba(84, 95, 125, 0.7);
+
+      width: 400px;
+      border-bottom-left-radius: 8px;
+      border-top-left-radius: 8px;
+    }
+  }
+}
+
+.card-item {
+  text-align: left;
+
+  h5 {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    text-transform: uppercase;
+    color: #213f7d;
+  }
+
+  p {
+    margin-top: 15px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    text-transform: uppercase;
+    color: #545f7d;
+  }
+}
+
+.dashboard-template-wrapper {
+  .MuiPaper-root {
+    background: #ffffff;
+    box-shadow: 3px 0px 20px rgba(0, 0, 0, 0.04);
+  }
+
+  .MuiToolbar-root {
+    background-color: #ffffff !important;
+    box-shadow: none !important;
+  }
+}
+
+@media screen and (max-width: 1046px) {
+  .nav-header {
+    .right-nav-section {
+      display: flex;
+      gap: 20px;
+      justify-self: end;
+      align-items: center;
+
+      .docs-text {
+        font-size: 12px;
+      }
+
+      .username-text {
+        font-size: 10px;
+      }
+    }
+
+    .search-wrapper {
+      input {
+        width: 200px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .nav-header {
+    align-items: center;
+    padding-top: 15px;
+
+    .right-nav-section {
+      .lg-avatar {
+        display: none;
+      }
+
+      .sm-avatar {
+        display: flex;
+      }
+
+      .notify-bell {
+        display: none;
+      }
+
+      .docs-text {
+        display: none;
+      }
+
+      .username-text {
+        display: none;
+      }
+    }
+  }
+}
