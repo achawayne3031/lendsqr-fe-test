@@ -144,6 +144,15 @@ const handleClose = () => {
 };
 
 
+const filterBtnRef = React.useRef<null | HTMLElement>(null);
+
+const handleKeyDown = () => {
+     // filterBtnRef.click()
+    //  filterBtnRef.click()
+    filterBtnRef.current?.click()
+}
+
+
 
 
   return (
@@ -154,12 +163,13 @@ const handleClose = () => {
             <TableHead>
             <TableRow>
                 <TableCell>Dessert (100g serving) 
-                    <Tooltip title="Filter list">
+                    <Tooltip title="Filter list" ref={filterBtnRef}>
                     <IconButton id="demo-positioned-button"
                             aria-controls={open ? 'demo-positioned-menu' : undefined}
                             aria-haspopup="true"
                             aria-expanded={open ? 'true' : undefined}
                             onClick={handleClick}
+                            
                             >
                         <FilterListIcon />
                     </IconButton>
@@ -180,10 +190,41 @@ const handleClose = () => {
        
                
 
-                <TableCell align="right">Calories</TableCell>
-                <TableCell align="right">Fat&nbsp;(g)</TableCell>
-                <TableCell align="right">Carbs&nbsp;(g)</TableCell>
-                <TableCell align="right">Protein&nbsp;(g)</TableCell>
+                <TableCell align="right">Calories
+
+                    <Tooltip title="Filter list">
+                        <IconButton onClick={handleKeyDown}>
+                            <FilterListIcon />
+                        </IconButton>
+                    </Tooltip>
+                
+                </TableCell>
+                <TableCell align="right">Fat
+
+                    <Tooltip title="Filter list">
+                        <IconButton onClick={handleKeyDown}>
+                            <FilterListIcon />
+                        </IconButton>
+                    </Tooltip>
+                
+                
+                </TableCell>
+                <TableCell align="right">Carbs
+                    <Tooltip title="Filter list">
+                        <IconButton onClick={handleKeyDown}>
+                            <FilterListIcon />
+                        </IconButton>
+                    </Tooltip>
+                
+                </TableCell>
+                <TableCell align="right">Protein
+                    <Tooltip title="Filter list">
+                        <IconButton onClick={handleKeyDown}>
+                            <FilterListIcon />
+                        </IconButton>
+                    </Tooltip>
+                
+                </TableCell>
             </TableRow>
             </TableHead>
             <TableBody>
