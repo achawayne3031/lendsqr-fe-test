@@ -1,3 +1,8 @@
+* {
+  color: #545f7d;
+  font-family: 'Work-Sans';
+}
+
 .content-wrapper {
   margin-top: 70px;
   margin-left: 250px;
@@ -94,6 +99,48 @@
     background-color: #ffffff !important;
     box-shadow: none !important;
   }
+}
+
+.viewer-btn {
+  float: right !important;
+  padding: 0px;
+}
+
+.table-container {
+  * {
+    color: #545f7d;
+  }
+}
+
+.table-pagination-wrapper {
+  .MuiToolbar-root {
+    align-items: baseline;
+  }
+}
+
+.pagination-wrapper {
+  .Mui-selected {
+    background-color: none !important;
+    color: #545f7d !important;
+  }
+  .MuiPaginationItem-root:hover {
+    background-color: none !important;
+  }
+}
+
+.MuiChip-label {
+  padding-left: 5px !important;
+  padding-right: 5px !important;
+}
+
+.table-cell-text {
+  font-size: 11px !important;
+  padding: 5px !important;
+}
+
+.chip-text {
+  font-size: 10px;
+  padding: 0px 5px 0px 5px !important;
 }
 
 @media screen and (max-width: 1046px) {

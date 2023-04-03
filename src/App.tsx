@@ -7,6 +7,8 @@ import { NoMatch } from './pages/NoMatch';
 import { Dashboard } from './pages/dashboard/Dashboard';
 import { Home } from './pages/dashboard/Home'
 import { UserDetail } from './pages/dashboard/UserDetail';
+import { ToastContainer } from 'react-toastify';
+
 
 
 
@@ -14,23 +16,27 @@ import { UserDetail } from './pages/dashboard/UserDetail';
 function App() {
   return (
 
+    <>
+    <ToastContainer />
+
+
     <Routes>
       <Route path='/'>
         <Route index element={<Login />} />
       </Route>
 
-
     <Route path='dashboard' element={ <Dashboard />}>
       <Route index element={<Home />} />
-      <Route path='user-detail' element={<UserDetail /> } /> 
+      <Route path='user-detail/:id' element={<UserDetail /> } /> 
     </Route>
-
 
     <Route path='*' element={<NoMatch />} />
 
   </Routes>
 
 
+
+  </>
    
 
 

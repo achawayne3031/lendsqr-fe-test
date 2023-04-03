@@ -1,0 +1,136 @@
+* {
+  font-family: 'Avenir Next';
+}
+
+.login-content-wrapper {
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  .login-illustrator {
+    width: 70%;
+  }
+
+  .login-wrapper {
+    .form-wrapper {
+      margin-top: 60px;
+
+      .error-alert {
+        color: red;
+        font-size: 13px;
+      }
+
+      .forgot-pass {
+        margin-bottom: 30px;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 16px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: #39cdcc;
+      }
+
+      .btn-custom {
+        background: #39cdcc;
+        border-radius: 8px;
+        width: 100%;
+        padding: 15px;
+        color: #ffffff;
+        border: 0px;
+        font-weight: 600;
+      }
+
+      .form-input-wrapper {
+        position: relative;
+
+        .show-password {
+          position: absolute;
+          top: 20px;
+          right: 20px;
+          cursor: pointer;
+          font-weight: 600;
+          font-size: 12px;
+          line-height: 16px;
+          text-align: center;
+          letter-spacing: 0.1em;
+          text-transform: uppercase;
+
+          color: #39cdcc;
+        }
+        input {
+          background: #ffffff;
+          border: 2px solid rgba(84, 95, 125, 0.15);
+          border-radius: 5px;
+          padding: 15px;
+          font-weight: 400;
+          font-size: 14px;
+          margin-bottom: 24px;
+        }
+      }
+    }
+
+    .title {
+      font-weight: 900;
+      font-size: 40px;
+      line-height: 55px;
+      letter-spacing: -0.04em;
+      color: #213f7d;
+    }
+
+    .subtitle {
+      font-weight: 400;
+      font-size: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .login-content-wrapper {
+    .login-illustrator {
+      * {
+        display: none !important;
+      }
+    }
+
+    .login-wrapper {
+      .form-wrapper {
+        margin-top: 60px;
+
+        .error-alert {
+          font-size: 11px;
+        }
+
+        .forgot-pass {
+          font-size: 10px;
+        }
+
+        .btn-custom {
+          padding: 13px;
+        }
+
+        .form-input-wrapper {
+          position: relative;
+
+          .show-password {
+            font-size: 10px;
+
+            color: #39cdcc;
+          }
+          input {
+            padding: 13px;
+            font-size: 12px;
+          }
+        }
+      }
+
+      .title {
+        font-size: 30px;
+        text-align: center;
+      }
+
+      .subtitle {
+        font-size: 15px;
+        text-align: center;
+      }
+    }
+  }
+}
