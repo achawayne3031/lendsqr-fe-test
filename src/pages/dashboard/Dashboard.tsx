@@ -183,26 +183,16 @@ export const Dashboard= (props: Props) => {
           </Drawer>
         </Box>
 
-        {/* <div className='main-content-wrapper'>
-          <Outlet />
-        </div> */}
+     
 
-
-          {/* <Box
+          <Box
           component="main"
           sx={{ flexGrow: 1, width: { sm: `calc(100% - ${drawerWidth}px)` } }}
           className='main-content-wrapper'
         >
           <Outlet />
-        </Box>   */}
-
-         <Box
-          component="main"
-          sx={{ width: { sm: 'auto' } }}
-          className='main-content-wrapper'
-        >
-          <Outlet />
         </Box>  
+
 
 
       </Box>
