@@ -5,12 +5,14 @@ import Container from '@mui/material/Container';
 import './login.scss'
 import { useFormik } from 'formik';
 import { LoginValidation } from "./../validations/AuthValidation";
-
-
+import { displayNotify } from '../utilities/Notify'
+import { useNavigate } from 'react-router-dom';
 
 
 
 export const Login = () => {
+
+  const navigate = useNavigate()
 
   const [formData, setFormData] = useState({
       email: "",
@@ -47,7 +49,20 @@ export const Login = () => {
 
 
 const initRequest = () => {
-  handleClose()
+
+  if(values.email === 'admin@gmail.com'){
+    if(values.password === 'admin1234'){
+      displayNotify('Login Successful', 'success')
+      navigate('dashboard')
+    }else{
+      displayNotify('Invalid Login Credentials', 'error')
+    }
+  }else{
+    displayNotify('Invalid Login Credentials', 'error')
+  }
+
+
+  //handleClose()
 }
 
 
@@ -98,6 +113,9 @@ const { values, errors, handleSubmit, setFieldValue, touched } = useFormik({
             <div className='login-wrapper'>
               <h5 className='title'>Welcome!</h5>
               <p className='subtitle'>Enter details to login.</p>
+              <div className="alert alert-primary" role="alert">
+                Email <b>admin@gmail.com</b>, Password <b>admin1234</b>
+              </div>
               <div className='form-wrapper'>
                   <div className="form-group form-input-wrapper">
                       <input

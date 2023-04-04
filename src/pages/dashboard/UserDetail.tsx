@@ -79,7 +79,7 @@ export const UserDetail = () => {
             <div className='avatar-wrapper'>
               <div>
                 {userDetails?.profile.avatar &&
-                    <img src={userDetails.profile.avatar} className='img-fluid rounded-circle' />
+                    <img src={userDetails.profile.avatar} className='img-fluid rounded-circle' alt='Profile Avatar' />
 
                 }
               </div>
