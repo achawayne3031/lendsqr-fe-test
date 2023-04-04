@@ -3,6 +3,11 @@
   font-family: 'Work-Sans';
 }
 
+.main-content-wrapper {
+  padding-top: 80px;
+  background-color: #fbfbfb !important;
+}
+
 .content-wrapper {
   margin-top: 70px;
   margin-left: 250px;
@@ -70,6 +75,7 @@
 
 .card-item {
   text-align: left;
+  background-color: #ffffff;
 
   h5 {
     font-weight: 700;
@@ -106,6 +112,66 @@
   padding: 0px;
 }
 
+#filter-menu {
+  .menu-item-wrapper {
+    .item-input-wrapper {
+      .select-item {
+        width: 100%;
+        padding: 2px;
+        padding-left: 10px;
+        margin-bottom: 15px;
+        font-size: 13px;
+
+        .MuiSelect-select {
+          padding: 7px !important;
+        }
+
+        .menu-content-item {
+          padding: 7px !important;
+        }
+
+        .placerholder {
+          font-size: 13px;
+          color: #ced4da;
+          padding: 7px !important;
+        }
+      }
+
+      label {
+        font-size: 12px;
+      }
+
+      input {
+        font-size: 13px;
+        margin-bottom: 15px;
+      }
+    }
+
+    .filter-btn-wrapper {
+      display: flex;
+      gap: 10px;
+
+      button {
+        font-size: 13px;
+        padding: 4px 25px;
+      }
+
+      button:nth-child(2) {
+        background-color: #39cdcc;
+        border: 1px solid #39cdcc;
+        border-radius: 5px;
+        color: #ffffff;
+      }
+
+      button:nth-child(1) {
+        background-color: #ffffff;
+        border: 1px solid #39cdcc;
+        border-radius: 5px;
+      }
+    }
+  }
+}
+
 .table-container {
   * {
     color: #545f7d;
@@ -134,8 +200,15 @@
 }
 
 .table-cell-text {
-  font-size: 11px !important;
-  padding: 5px !important;
+  font-size: 12px;
+  padding: 10px !important;
+}
+
+.table-header {
+  font-weight: 600;
+  font-size: 10px;
+  color: #545f7d;
+  text-transform: uppercase;
 }
 
 .chip-text {

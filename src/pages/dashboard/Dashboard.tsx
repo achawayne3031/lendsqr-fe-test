@@ -144,30 +144,8 @@ export const Dashboard= (props: Props) => {
                         </svg>
                     </span>
                 </span>
-
                 </div>
-
-
-              {/* <div>
-                <Stack
-                  direction={{ xs: 'column', sm: 'row' }}
-                  spacing={{ xs: 1, sm: 2, md: 4 }}
-                >
-                  <Item>Item 1</Item>
-                  <Item>Item 2</Item>
-                  <Item>Item 2</Item>
-                </Stack>
-              </div> */}
-
             </div>
-
-          
-
-
-  {/* 
-            <Typography variant="h6" noWrap component="div">
-              Responsive drawer
-            </Typography> */}
 
           </Toolbar>
         </AppBar>
@@ -204,16 +182,29 @@ export const Dashboard= (props: Props) => {
             <SideBar />
           </Drawer>
         </Box>
-        <Box
-          component="main"
-          sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` } }}
-        >
-          
-          <Toolbar />
 
+        {/* <div className='main-content-wrapper'>
           <Outlet />
+        </div> */}
 
-        </Box>
+
+          {/* <Box
+          component="main"
+          sx={{ flexGrow: 1, width: { sm: `calc(100% - ${drawerWidth}px)` } }}
+          className='main-content-wrapper'
+        >
+          <Outlet />
+        </Box>   */}
+
+         <Box
+          component="main"
+          sx={{ width: { sm: 'auto' } }}
+          className='main-content-wrapper'
+        >
+          <Outlet />
+        </Box>  
+
+
       </Box>
     </div>
 

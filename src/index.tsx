@@ -8,6 +8,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { StyledEngineProvider } from '@mui/material/styles';
 import { store } from './store/index';
 import { Provider } from 'react-redux';
+import { ToastContainer } from 'react-toastify';
 
 
 
@@ -21,7 +22,10 @@ root.render(
     <Provider store={store}>
       <StyledEngineProvider injectFirst>
         <BrowserRouter>
+
           <App />
+          <ToastContainer />
+
         </BrowserRouter>
       </StyledEngineProvider>
     </Provider>

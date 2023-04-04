@@ -10,9 +10,13 @@ import { DashboardTable } from './DashboardTable';
 export const Home = () => {
 
   return (
-    <div>
-          <DashboardCard />
-          <DashboardTable />
-    </div>
+
+          <div>
+
+         
+            <DashboardCard />
+            <DashboardTable />
+            </div>
+   
   )
 }
