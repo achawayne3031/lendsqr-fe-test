@@ -1,5 +1,5 @@
 export interface Users {
-  createdAt: string
+  createdAt: any
   orgName: string
   userName: string
   email: string
